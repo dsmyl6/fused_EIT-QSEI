@@ -49,7 +49,8 @@ for i=1:nel
     x31=x(nod3)-x(nod1);
     x12=x(nod1)-x(nod2);
     
-    Ael=abs((x12*y13-x31*y21))/2;
+    %Ael=abs((x12*y13-x31*y21))/2;
+    Ael = abs((x23*(y13-y21) + x31*(y21-y32) + x12*(y32-y13))/2);
     
     B=[ y32     0   y13     0   y21     0
         0   x23     0   x31     0   x12
